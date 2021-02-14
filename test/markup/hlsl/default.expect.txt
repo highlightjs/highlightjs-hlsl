@@ -1,0 +1,33 @@
+<span class="hljs-keyword">cbuffer</span> Constants : <span class="hljs-keyword">register</span>(b0)
+{
+	<span class="hljs-type">float4x4</span> mtxWorld;
+	<span class="hljs-type">float4x4</span> mtxView;
+	<span class="hljs-type">float4x4</span> mtxProj;
+}
+
+<span class="hljs-type">struct</span> VS_INPUT
+{
+	<span class="hljs-type">float3</span> Position : <span class="hljs-built_in">POSITION</span>;
+	<span class="hljs-type">float3</span> Color : <span class="hljs-built_in">COLOR0</span>;
+};
+
+<span class="hljs-type">struct</span> VS_OUTPUT
+{
+	<span class="hljs-type">float4</span> Position : <span class="hljs-built_in">SV_Position</span>;
+	<span class="hljs-type">float3</span> Color : <span class="hljs-built_in">COLOR0</span>;
+};
+
+<span class="hljs-comment">// Vertex Shader</span>
+VS_OUTPUT VS_main(VS_INPUT IN)
+{
+	VS_OUTPUT OUT;
+	OUT.Position = <span class="hljs-built_in">mul</span>(mtxProj, <span class="hljs-built_in">mul</span>(mtxView, <span class="hljs-built_in">mul</span>(mtxWorld, <span class="hljs-type">float4</span>(IN.Position, <span class="hljs-number">1.0f</span>))));
+	OUT.Color = IN.Color;
+	<span class="hljs-keyword">return</span> OUT;
+}
+
+<span class="hljs-comment">// Pixel Shader</span>
+<span class="hljs-type">float4</span> PS_main(VS_OUTPUT IN) : <span class="hljs-built_in">SV_Target0</span>
+{
+	<span class="hljs-keyword">return</span> <span class="hljs-type">float4</span>(IN.Color, <span class="hljs-number">0</span>);
+}

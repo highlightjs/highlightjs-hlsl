@@ -1,0 +1,33 @@
+cbuffer Constants : register(b0)
+{
+	float4x4 mtxWorld;
+	float4x4 mtxView;
+	float4x4 mtxProj;
+}
+
+struct VS_INPUT
+{
+	float3 Position : POSITION;
+	float3 Color : COLOR0;
+};
+
+struct VS_OUTPUT
+{
+	float4 Position : SV_Position;
+	float3 Color : COLOR0;
+};
+
+// Vertex Shader
+VS_OUTPUT VS_main(VS_INPUT IN)
+{
+	VS_OUTPUT OUT;
+	OUT.Position = mul(mtxProj, mul(mtxView, mul(mtxWorld, float4(IN.Position, 1.0f))));
+	OUT.Color = IN.Color;
+	return OUT;
+}
+
+// Pixel Shader
+float4 PS_main(VS_OUTPUT IN) : SV_Target0
+{
+	return float4(IN.Color, 0);
+}
