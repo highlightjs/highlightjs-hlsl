@@ -1,0 +1,26 @@
+{
+    "name": "highlightjs-hlsl",
+    "version": "0.1.0",
+    "description": "highlight.js syntax definition for HLSL",
+    "main": "src/languages/hlsl.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stef-levesque/highlightjs-hlsl.git"
+    },
+    "keywords": [
+        "hlsl",
+        "highlight.js",
+        "highlightjs",
+        "syntax-highlight",
+        "syntax"
+    ],
+    "author": "Stef Levesque (@stef-levesque)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/stef-levesque/highlightjs-hlsl/issues"
+    },
+    "homepage": "https://github.com/stef-levesque/highlightjs-hlsl"
+}
