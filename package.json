@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/stef-levesque/highlightjs-hlsl.git"
+        "url": "https://github.com/highlightjs/highlightjs-hlsl.git"
     },
     "keywords": [
         "hlsl",
@@ -20,7 +20,7 @@
     "author": "Stef Levesque (@stef-levesque)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/stef-levesque/highlightjs-hlsl/issues"
+        "url": "https://github.com/highlightjs/highlightjs-hlsl/issues"
     },
-    "homepage": "https://github.com/stef-levesque/highlightjs-hlsl"
+    "homepage": "https://github.com/highlightjs/highlightjs-hlsl"
 }

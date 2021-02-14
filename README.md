@@ -26,7 +26,7 @@ Simply load this module after loading Highlight.js. You'll use the minified vers
 </script>
 ```
 
-For more details of the usage see [Highlight.js main page](https://github.com/stef-levesque/highlight.js#highlightjs).
+For more details of the usage see [Highlight.js main page](https://github.com/highlightjs/highlight.js#highlightjs).
 
 ## Authors
 
@@ -36,7 +36,7 @@ For more details of the usage see [Highlight.js main page](https://github.com/st
 
 Feel free to create issues or (even better) pull requests.
 
-A good starting point for how to build and test your changes locally is [here](https://github.com/stef-levesque/highlight.js/blob/master/extra/3RD_PARTY_QUICK_START.md).
+A good starting point for how to build and test your changes locally is [here](https://github.com/highlightjs/highlight.js/blob/master/extra/3RD_PARTY_QUICK_START.md).
 
 ## Links
 
