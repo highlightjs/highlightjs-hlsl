@@ -22,7 +22,7 @@ Simply load this module after loading Highlight.js. You'll use the minified vers
 ></script>
 <link rel="stylesheet" href="/path/to/highlightjs/styles/default.min.css" />
 <script type="text/javascript">
-  hljs.initHighlightingOnLoad();
+  hljs.highlightAll();
 </script>
 ```
 
